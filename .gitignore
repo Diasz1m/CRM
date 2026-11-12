@@ -1,0 +1,21 @@
+# Dependências e arquivos gerados
+node_modules/
+target/
+dist/
+
+# Configuração local e credenciais
+.env
+.env.*
+!.env.example
+*.local
+.idea/
+*.iml
+.vscode/
+.DS_Store
+*.log
+
+# Arquivos locais das ferramentas de desenvolvimento
+.agents/
+.codex/
+.aws/
+.github/modernize/
