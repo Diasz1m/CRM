@@ -1,0 +1,13 @@
+server:
+  port: ${CRM_REPORTS_PORT:8081}
+
+spring:
+  mvc:
+    problemdetails:
+      enabled: true
+
+crm:
+  url: ${CRM_BACKEND_URL:http://127.0.0.1:8080}
+  reports:
+    username: ${CRM_REPORTS_USERNAME:crm-reports}
+    password: ${CRM_REPORTS_PASSWORD:}

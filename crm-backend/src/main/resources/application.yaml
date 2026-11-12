@@ -1,0 +1,34 @@
+spring:
+  datasource:
+    url: ${CRM_DB_URL:jdbc:postgresql://localhost:5432/crm}
+    username: ${CRM_DB_USER:crm}
+    password: ${CRM_DB_PASSWORD:crm_local}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+  mvc:
+    problemdetails:
+      enabled: true
+  data:
+    web:
+      pageable:
+        max-page-size: 100
+
+server:
+  servlet:
+    session:
+      timeout: 30m
+      cookie:
+        http-only: true
+        same-site: lax
+        secure: ${CRM_SECURE_COOKIE:false}
+
+crm:
+  reports:
+    url: ${CRM_REPORTS_URL:http://127.0.0.1:8081}
+    username: ${CRM_REPORTS_USERNAME:crm-reports}
+    password: ${CRM_REPORTS_PASSWORD:}
+  admin:
+    username: ${CRM_ADMIN_USERNAME:admin}
+    password: ${CRM_ADMIN_PASSWORD:}
